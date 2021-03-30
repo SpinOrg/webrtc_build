@@ -73,7 +73,7 @@ jobs:
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
-        files: ${{runner.workspace}}/build/_deps/webrtc/src/out/webrtc_${{ matrix.os }}.tar.gz
+        files: ${{runner.workspace}}/webrtc_${{ matrix.os }}.tar.gz
         prerelease: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
